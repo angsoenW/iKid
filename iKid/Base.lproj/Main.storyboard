@@ -1,24 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1HH-R3-dmY">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Dad-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="What did the bufflo say to his boy as he dropped him off at school?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eM-iG-flm">
+                                <rect key="frame" x="10" y="413.66666666666669" width="373" height="25"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5FC-cg-x2y">
+                                <rect key="frame" x="283" y="533.66666666666663" width="60" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Next"/>
+                                <connections>
+                                    <action selector="DadNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fF3-pz-HvH"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.83072219372112255" green="0.52631926281185171" blue="0.98914493633092782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4eM-iG-flm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JC9-03-BA3"/>
+                            <constraint firstItem="5FC-cg-x2y" firstAttribute="top" secondItem="4eM-iG-flm" secondAttribute="bottom" constant="95" id="Jgt-uR-lAv"/>
+                            <constraint firstItem="4eM-iG-flm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="V5U-kV-QIj"/>
+                            <constraint firstAttribute="trailing" secondItem="4eM-iG-flm" secondAttribute="trailing" constant="10" id="qjN-jM-H8y"/>
+                            <constraint firstItem="4eM-iG-flm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sAJ-cP-uBK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5FC-cg-x2y" secondAttribute="trailing" constant="50" id="yUr-T7-yeC"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Dad" image="mustache.fill" catalog="system" selectedImage="mustache" id="IEC-bl-xZE">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="DadQ" destination="4eM-iG-flm" id="JJE-GC-DjF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-51.145038167938928" y="384.50704225352115"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="vpF-T0-kv1">
+            <objects>
+                <tabBarController id="1HH-R3-dmY" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g9I-NP-hQk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="UPs-oC-XmB"/>
+                        <segue destination="ROJ-Bk-qZ4" kind="relationship" relationship="viewControllers" id="EMv-zG-VGS"/>
+                        <segue destination="Mwu-el-4bM" kind="relationship" relationship="viewControllers" id="zmQ-ga-cas"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J3m-ze-iUv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-49" y="-389"/>
+        </scene>
+        <!--Pun-->
+        <scene sceneID="zTG-co-Fwe">
+            <objects>
+                <viewController id="ROJ-Bk-qZ4" customClass="ViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MOE-pr-La8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="I have a horse named Mayo..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0Z-1u-h0A">
+                                <rect key="frame" x="10" y="413.66666666666669" width="373" height="25"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGr-UW-Spi">
+                                <rect key="frame" x="283" y="533.66666666666663" width="60" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Next"/>
+                                <connections>
+                                    <action selector="PunNext:" destination="ROJ-Bk-qZ4" eventType="touchUpInside" id="PVv-Q8-SiQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t8A-px-CYJ"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="r0Z-1u-h0A" firstAttribute="centerY" secondItem="MOE-pr-La8" secondAttribute="centerY" id="7CO-SM-REb"/>
+                            <constraint firstItem="r0Z-1u-h0A" firstAttribute="leading" secondItem="MOE-pr-La8" secondAttribute="leading" constant="10" id="QJx-Yj-UQn"/>
+                            <constraint firstItem="r0Z-1u-h0A" firstAttribute="centerX" secondItem="MOE-pr-La8" secondAttribute="centerX" id="Sia-D2-jPO"/>
+                            <constraint firstAttribute="trailing" secondItem="r0Z-1u-h0A" secondAttribute="trailing" constant="10" id="ePE-Pl-cel"/>
+                            <constraint firstItem="kGr-UW-Spi" firstAttribute="top" secondItem="r0Z-1u-h0A" secondAttribute="bottom" constant="95" id="eaP-Au-Nei"/>
+                            <constraint firstItem="t8A-px-CYJ" firstAttribute="trailing" secondItem="kGr-UW-Spi" secondAttribute="trailing" constant="50" id="yYE-LR-H7E"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pun" image="eyes" catalog="system" selectedImage="eyes" id="nBf-do-jem">
+                        <color key="badgeColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="PunQ" destination="r0Z-1u-h0A" id="OQN-CN-Vs2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SFZ-CW-jdn" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="856" y="-13"/>
+        </scene>
+        <!--Pun-->
+        <scene sceneID="tms-vA-UJd">
+            <objects>
+                <viewController id="Mwu-el-4bM" customClass="ViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sAr-R5-zHx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="What do you call a group of men waiting in line for a haircut?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iey-jw-XXi">
+                                <rect key="frame" x="10" y="413.66666666666669" width="373" height="25"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsf-yW-43n">
+                                <rect key="frame" x="283" y="533.66666666666663" width="60" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Next"/>
+                                <connections>
+                                    <action selector="GoodNext:" destination="Mwu-el-4bM" eventType="touchUpInside" id="env-pO-Bdc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GbY-TS-EwW"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <constraints>
+                            <constraint firstItem="Iey-jw-XXi" firstAttribute="centerX" secondItem="sAr-R5-zHx" secondAttribute="centerX" id="6Mb-y4-ngt"/>
+                            <constraint firstAttribute="trailing" secondItem="Iey-jw-XXi" secondAttribute="trailing" constant="10" id="6Zr-H9-tKC"/>
+                            <constraint firstItem="Iey-jw-XXi" firstAttribute="centerY" secondItem="sAr-R5-zHx" secondAttribute="centerY" id="NyR-Py-ZaV"/>
+                            <constraint firstItem="Iey-jw-XXi" firstAttribute="leading" secondItem="sAr-R5-zHx" secondAttribute="leading" constant="10" id="POF-rT-tSV"/>
+                            <constraint firstItem="GbY-TS-EwW" firstAttribute="trailing" secondItem="Zsf-yW-43n" secondAttribute="trailing" constant="50" id="QIc-4z-fc2"/>
+                            <constraint firstItem="Zsf-yW-43n" firstAttribute="top" secondItem="Iey-jw-XXi" secondAttribute="bottom" constant="95" id="Vt1-ng-mqU"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pun" image="heart.fill" catalog="system" selectedImage="heart" id="DjP-tW-Gr6">
+                        <color key="badgeColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="GoodQ" destination="Iey-jw-XXi" id="nT8-EQ-RD8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Os6-1d-AxY" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="856" y="-657"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="eyes" catalog="system" width="128" height="99"/>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
+        <image name="mustache" catalog="system" width="128" height="51"/>
+        <image name="mustache.fill" catalog="system" width="128" height="50"/>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
