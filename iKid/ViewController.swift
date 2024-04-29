@@ -11,10 +11,10 @@ class ViewController: UIViewController {
 
     let DadJoke = [("What did the bufflo say to his boy as he dropped him off at school?", "Bison!"),("When does a joke become a dad joke?", "When it becomes apparent.")]
     var dadVar = (0,0)
-    let PunJoke = [("I have a horse named Mayo...", "Sometimes Mayo neighs!"), ("Patient: Doc I broke my arm in three places.", "Doctor: Well, don't go to those places.")]
+    let PunJoke = [("I have a horse named Mayo...", "Sometimes Mayo neighs!"), ("Patient: Doc I broke my arm in three places.", "Doctor: Well, don't go to those places."), ("What do you call a group of men waiting in line for a haircut?", "A barbeque."), ("When you Excel they spreadsheet about you...", "You made a power point!"),  ("Why didn't the vampire bite Taylor Swift?", "Cause she had bad blood.")]
     var punVar = (0,0)
-    let GoodJoke = [("What do you call a group of men waiting in line for a haircut?", "A barbeque."), ("When you Excel they spreadsheet about you...", "You made a power point!"), ("Why didn't the vampire bite Taylor Swift?", "Cause she had bad blood.")]
-    var goodVar = (0,0)
+    @IBOutlet weak var goodImg: UIImageView!
+    var goodVar = 0
     
 
     @IBOutlet weak var DadQ: UILabel!
@@ -54,18 +54,14 @@ class ViewController: UIViewController {
 
     }
     @IBAction func GoodNext(_ sender: UIButton) {
-        if goodVar.1 == 0 {
-            goodVar.1 = 1
-            GoodQ.text = GoodJoke[goodVar.0].1
+        if goodVar == 0 {
+            goodVar = 1
+            GoodQ.isHidden = true
+            goodImg.isHidden = false
         } else {
-            if goodVar.0 == GoodJoke.count - 1 {
-                goodVar.0 = 0
-                goodVar.1 = 0
-            } else {
-                goodVar.0 += 1
-            }
-            GoodQ.text = GoodJoke[goodVar.0].0
-            goodVar.1 = 0
+            goodVar = 0
+            GoodQ.isHidden = false
+            goodImg.isHidden = true
         }
 
     }
@@ -82,6 +78,7 @@ class ViewController: UIViewController {
         if GoodQ != nil {
             GoodQ.lineBreakMode = .byWordWrapping
             GoodQ.numberOfLines = 0
+            goodImg.isHidden = true
         }
         
         
